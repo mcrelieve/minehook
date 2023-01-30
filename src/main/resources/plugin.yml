@@ -1,0 +1,4 @@
+name: Minehook
+version: '${project.version}'
+main: me.kadotcom.Minehook.Minehook
+api-version: 1.13
