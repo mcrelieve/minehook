@@ -11,6 +11,6 @@ You may edit it and use it for yourself or your server but you may not redistrib
 
 # Download Links and other links
 
-CurseForge: https://www.curseforge.com/minecraft/bukkit-plugins/minehook \
+CurseForge: https://www.curseforge.com/minecraft/bukkit-plugins/minehook (NOT AVAILABLE YET)\
 SpigotMC: https://www.spigotmc.org/resources/minehook.107722/ \
 Discord: https://discord.gg/2wNv7MSJaw
