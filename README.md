@@ -1,5 +1,9 @@
 # Minehook
-Minehook is yet another Discord Webhook Integration Plugin for Minecraft
+Minehook is a logging plugin that uses Discord Webhooks.
+
+# How it works
+
+When a player/the server does an action that is enabled for it to be logged, example: player joins, server/console runs a command. It will log it using a set discord webhook url.
 
 # DO NOT REDISTRIBUTE THIS PLUGIN
 
