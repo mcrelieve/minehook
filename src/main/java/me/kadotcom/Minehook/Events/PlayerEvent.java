@@ -152,4 +152,46 @@ public class PlayerEvent implements Listener {
             }
         }
     }
+
+    @EventHandler
+    public void advancementGain(PlayerAdvancementDoneEvent ev){
+        if(p.getConfig().getBoolean("log.player.advancementGain")){
+            DiscordWebhook web = new DiscordWebhook(p.getConfig().getString("discordWebhook"));
+
+            DiscordWebhook.EmbedObject em = new DiscordWebhook.EmbedObject();
+            em.setColor(Color.magenta);
+            em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
+            em.setDescription("got the advancement " + ev.getAdvancement().getDisplay().getTitle());
+            em.setFooter(p.getConfig().getString("serverName"),"");
+
+            web.addEmbed(em);
+
+            try{
+                web.execute();
+            }catch(IOException e){
+                log.info(e.getStackTrace().toString());
+            }
+        }
+    }
+
+    @EventHandler
+    public void playerChangedGameMode(PlayerGameModeChangeEvent ev){
+        if(p.getConfig().getBoolean("log.player.advancementGain")){
+            DiscordWebhook web = new DiscordWebhook(p.getConfig().getString("discordWebhook"));
+
+            DiscordWebhook.EmbedObject em = new DiscordWebhook.EmbedObject();
+            em.setColor(Color.LIGHT_GRAY);
+            em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
+            em.setDescription("changed their game mode to " + ev.getNewGameMode().name());
+            em.setFooter(p.getConfig().getString("serverName"),"");
+
+            web.addEmbed(em);
+
+            try{
+                web.execute();
+            }catch(IOException e){
+                log.info(e.getStackTrace().toString());
+            }
+        }
+    }
 }
