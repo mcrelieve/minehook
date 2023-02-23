@@ -1,0 +1,28 @@
+                # Minehook #
+# Discord Webhook Integration Plugin for Minecraft #
+            # Plugin by KadotCom #
+
+discordWebhook: "" # Discord Webhook URL
+
+serverName: "Minehook" # Server name, will appear at footer of messages.
+
+footerSettings:
+  showPlayerCount: false # Shows the player count at the footer.
+  showEvent: false # Shows the event running at the footer.
+
+log: # Settings for logging
+  server: # Server logging events
+    command: true # Logs when a command is run by server
+    serverStart: true # Logs when the server goes online
+    serverShutdown: true # Logs when the server goes offline
+  player: # Player logging events
+    playerJoin: true # Logs when a player joins
+    playerLeave: true # Logs when a player leaves
+    playerChat: true # Logs when a player sends a message
+    playerDeath: true # Logs when a player dies
+    playerKick: false # Logs when a player gets kicked
+    advancementGain: false # Logs when a player gains an advancement
+    playerGMChange: false # Logs when a player changes their game mode
+    command: true # Logs when a command is run by player
+
+
