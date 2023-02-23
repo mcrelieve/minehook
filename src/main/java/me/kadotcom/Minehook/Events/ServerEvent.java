@@ -29,7 +29,7 @@ public class ServerEvent implements Listener {
 
             em.setColor(Color.WHITE);
 
-            em.setDescription(ev.getSender().getName() + " ran the command " + ev.getCommand());
+            em.setDescription(ev.getSender().getName() + " 執行指令 " + ev.getCommand());
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);

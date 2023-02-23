@@ -29,7 +29,7 @@ public class PlayerEvent implements Listener {
             DiscordWebhook.EmbedObject em = new DiscordWebhook.EmbedObject();
             em.setColor(Color.GREEN);
             em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
-            em.setDescription("Joined.");
+            em.setDescription("加入");
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);
@@ -50,7 +50,7 @@ public class PlayerEvent implements Listener {
 
             em.setColor(Color.RED);
             em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
-            em.setDescription("Left.");
+            em.setDescription("離開   ");
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);
@@ -72,7 +72,7 @@ public class PlayerEvent implements Listener {
 
             em.setColor(new Color(139,0,0));
             em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
-            em.setDescription("Kicked, reason: " + ev.getReason() + ".");
+            em.setDescription("踢出, 原因: " + ev.getReason() + ".");
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);
@@ -118,7 +118,7 @@ public class PlayerEvent implements Listener {
             DiscordWebhook.EmbedObject em = new DiscordWebhook.EmbedObject();
             em.setColor(Color.WHITE);
             em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
-            em.setDescription("ran the command " + ev.getMessage());
+            em.setDescription("執行指令 " + ev.getMessage());
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);
@@ -161,7 +161,7 @@ public class PlayerEvent implements Listener {
             DiscordWebhook.EmbedObject em = new DiscordWebhook.EmbedObject();
             em.setColor(Color.magenta);
             em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
-            em.setDescription("got the advancement " + ev.getAdvancement().getDisplay().getTitle());
+            em.setDescription("取得成就 " + ev.getAdvancement().getDisplay().getTitle());
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);
@@ -182,7 +182,7 @@ public class PlayerEvent implements Listener {
             DiscordWebhook.EmbedObject em = new DiscordWebhook.EmbedObject();
             em.setColor(Color.LIGHT_GRAY);
             em.setAuthor(ev.getPlayer().getName(), "", "https://cravatar.eu/helmavatar/" + ev.getPlayer().getName() + "/128.png");
-            em.setDescription("changed their game mode to " + ev.getNewGameMode().name());
+            em.setDescription("更新他的遊戲模式至 " + ev.getNewGameMode().name());
             em.setFooter(p.getConfig().getString("serverName"),"");
 
             web.addEmbed(em);
